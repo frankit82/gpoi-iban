@@ -28,7 +28,7 @@ public class IBAN {
         }        
       
         // Verifica che la lunghezza sia corretta
-        if (iban.length() != 34){
+        if (iban.length() != 27){
             return false;
         }
 
@@ -59,6 +59,6 @@ public class IBAN {
         BigInteger risultato = ibanInt.mod(new BigInteger("97"));
         
         // Restituisce il risultato
-        return risultato.intValue() == 0;
+        return risultato.intValue() == 1;
     }
 }
